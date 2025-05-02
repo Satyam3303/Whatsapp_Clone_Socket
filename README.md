@@ -1,4 +1,4 @@
-# Realtime Socket.io Server with Winston Logging
+# Whataspp Socket.io Server with Winston Logging
 
 This is the Socket Connection for the Whatsapp Clone, a Node.js-based Socket.io server that provides real-time communication support for messaging applications. 
 It includes a custom event-based architecture and integrates **Winston** for robust logging.
