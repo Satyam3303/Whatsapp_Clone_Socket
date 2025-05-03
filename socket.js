@@ -37,11 +37,11 @@ io.on(emitters.CONNECTION, (socket) => {
       addUser(userData, socket.id);
       io.emit(emits.GET_USERS, getUsers());
       logger.info(
-        `${loggerMessages.USER_ADDED}${JSON.stringify(userData.name)}`
+        `${loggerMessages.success.USER_ADDED}${JSON.stringify(userData.name)}`
       );
     } catch (error) {
       logger.error(
-        `${loggerMessages.USER_ADD_FAILED}${JSON.stringify(userData)} - ${
+        `${loggerMessages.error.USER_ADD_FAILED}${JSON.stringify(userData)} - ${
           error.message
         }`
       );
@@ -55,16 +55,16 @@ io.on(emitters.CONNECTION, (socket) => {
       if (receiver) {
         io.to(receiver.socketId).emit(emits.GET_MESSAGE, data);
         logger.info(
-          `${loggerMessages.MESSAGE_SENT_FROM}${data.senderId} - ${data.receiverId}`
+          `${loggerMessages.success.MESSAGE_SENT_FROM}${data.senderId} - ${data.receiverId}`
         );
       } else {
         logger.warn(
-          `${loggerMessages.RECEIVER_ID_NOT_FOUND}${data.receiverId}`
+          `${loggerMessages.error.RECEIVER_ID_NOT_FOUND}${data.receiverId}`
         );
       }
     } catch (error) {
       logger.error(
-        `${loggerMessages.MESSAGE_SENT_FAILED}${JSON.stringify(data)} - ${
+        `${loggerMessages.error.MESSAGE_SENT_FAILED}${JSON.stringify(data)} - ${
           error.message
         }`
       );
@@ -87,9 +87,9 @@ io.on(emitters.CONNECTION, (socket) => {
 
 try {
   io.listen(PORT);
-  logger.info(`${loggerMessages.PORT_IS_RUNNING_ON}${PORT}`);
+  logger.info(`${loggerMessages.success.PORT_IS_RUNNING_ON}${PORT}`);
 } catch (error) {
   logger.error(
-    `${loggerMessages.SERVER_START_FAILED}${PORT} - ${error.message}`
+    `${loggerMessages.error.SERVER_START_FAILED}${PORT} - ${error.message}`
   );
 }
