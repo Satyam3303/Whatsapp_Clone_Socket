@@ -3,6 +3,8 @@
 This is the Socket Connection for the Whatsapp Clone, a Node.js-based Socket.io server that provides real-time communication support for messaging applications. 
 It includes a custom event-based architecture and integrates **Winston** for robust logging.
 
+---
+
 ## Features
 
 - ✅ Real-time communication using **Socket.io**
@@ -14,12 +16,16 @@ It includes a custom event-based architecture and integrates **Winston** for rob
 - ✅ Centralized logging with **Winston**
 - ✅ CORS support
 
+---
+
 ## Technologies Used
 
 - Node.js
 - Socket.io
 - Winston (for logging)
 - dotenv (for environment variable management)
+
+---
 
 ## Getting Started
 
@@ -39,9 +45,13 @@ npm install
 nodemon server.js
 ```
 
+---
+
 Logging
 Winston is configured with:
 - Console output (colorized)
 - logs/combined.log for all logs
 - logs/error.log for error-level logs only
 - All socket events, errors, and server lifecycle info are logged for debugging and monitoring.
+
+Built with care and lots of ☕ — Happy Coding!
