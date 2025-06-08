@@ -2,7 +2,7 @@ const loggerMessages = {
     success:{
         USER_ADDED: "User added: ",
         MESSAGE_SENT_FROM: "Message sent from ",
-        PORT_IS_RUNNING_ON: "🚀 Socket.IO server running on port ",
+        PORT_IS_RUNNING_ON: "Socket.IO server running on port ",
     },
     error:{
         USER_ADD_FAILED: "Failed to add user: ",
