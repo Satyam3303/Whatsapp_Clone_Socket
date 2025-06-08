@@ -4,6 +4,12 @@ This is the Socket Connection for the Whatsapp Clone, a Node.js-based Socket.io 
 It includes a custom event-based architecture and integrates **Winston** for robust logging.
 
 ---
+## Note
+
+This Build Requires The Server Setup and the Frontend Setup as well.
+ - Server Setup -> https://github.com/Satyam3303/Whatsapp_Clone_Server
+ - Socket Setup -> https://github.com/Satyam3303/Whatsapp_Clone_Socket
+---
 
 ## Features
 
